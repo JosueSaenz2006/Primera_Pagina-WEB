@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sobre mí - Mi página</title>
+    <link rel="stylesheet" href="../styles/styles.css" /> 
+  </head>
+  <body class="page">
+    <header class="site-header">
+      <h1 class="hero">Hola, soy Josué Sáenz</h1>
+      <!-- Banner interactivo: letras tipo "tren" -->
+      <div class="train-banner" aria-hidden="false" aria-label="Animación JDEJOSUEGAMER" title="Pasa el cursor para ver la animación">
+        <span class="train-letter" style="--i:0">J</span>
+        <span class="train-letter" style="--i:1">D</span>
+        <span class="train-letter" style="--i:2">E</span>
+        <span class="train-letter" style="--i:3">J</span>
+        <span class="train-letter" style="--i:4">O</span>
+        <span class="train-letter" style="--i:5">S</span>
+        <span class="train-letter" style="--i:6">U</span>
+        <span class="train-letter" style="--i:7">E</span>
+        <span class="train-letter" style="--i:8">G</span>
+        <span class="train-letter" style="--i:9">A</span>
+        <span class="train-letter" style="--i:10">M</span>
+        <span class="train-letter" style="--i:11">E</span>
+        <span class="train-letter" style="--i:12">R</span>
+      </div>
+
+      <!-- Botón para alternar tema oscuro/claro -->
+      <!-- ANTES: id="theme-toggle" | AHORA: id="boton-tema" -->
+      <button id="boton-tema" class="theme-toggle" aria-pressed="false" aria-label="Cambiar tema">
+        🌙 Modo oscuro
+      </button>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item">Inicio</li>
+          <li class="nav-item">Sobre mí</li>
+          <li class="nav-item">Contacto</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="profile">
+        <article class="intro">
+          <h2 class="subtitle">Un poco sobre mí</h2>
+          <p class="bio">
+            Me llamo Josué. Soy desarrollador aficionado y me encanta aprender nuevas tecnologías,
+            crear proyectos y compartir conocimiento.
+          </p>
+          <img class="inline-gif" src="../images/drogba-drogba-disgrace.gif" alt="Gif de programación" />
+        </article>
+
+        <figure class="avatar-wrap">
+          <img class="avatar" src="../images/source.gif" alt="Foto de perfil" />
+          <figcaption class="caption">Ohhhh Kevin De Bruyneee</figcaption>
+        </figure>
+      </section>
+
+      <section class="skills">
+        <h3 class="section-title">Habilidades</h3>
+        <p class="lead">Algunas tecnologías y herramientas que manejo:</p>
+        <ul class="skill-list">
+          <li class="skill"><a class="skill-link" href="html.html">HTML</a></li>
+          <li class="skill"><a class="skill-link" href="css.html">CSS</a></li>
+          <li class="skill"><a class="skill-link" href="js.html">JavaScript</a></li>
+        </ul>
+      </section>
+
+
+      <section class="soccerday">
+        <h3 class="section-title">Partido del día</h3>
+        <div class="video-wrap">
+          <iframe width="752" height="432"
+            src="https://www.youtube.com/embed/Cg345elWYbE"
+            title="GOLES DE ENZO Y CAICEDO | Chelsea 5-1 Ajax | Champions League 2025/26"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+        
+        <p>
+          Si no se reproduce aquí, míralo en
+          <a href="https://www.youtube.com/watch?v=Cg345elWYbE" target="_blank" rel="noopener">
+            YouTube
+          </a>.
+        </p>
+
+        <div class="match-report">
+          <h1>Reseña del Partido: Chelsea 5-1 Ajax</h1>
+          <h2>UEFA Champions League 2025 - Jornada 3</h2>
+          <p><strong>Fecha:</strong> Miércoles, 22 de octubre de 2025</p>
+          <p><strong>Estadio:</strong> Stamford Bridge, Londres</p>
+          <p class="score">CHELSEA 5 - 1 AJAX</p>
+          <p>El Chelsea, dirigido por Enzo Maresca, brindó un auténtico <span class="highlight">'festín de goles'</span> super clave para el exito de este</p>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <h3 class="aside-title">Contacto rápido</h3>
+        <address class="contact">
+          <p>
+            Correo:
+            <strong>
+              <span class="texto-correo">jsaenza1@est.ups.edu.ec</span>
+            </strong>
+            <button
+              type="button"
+              class="boton-copiar"
+              data-correo="jsaenza1@est.ups.edu.ec"
+              aria-label="Copiar correo">
+              Copiar
+            </button>
+          </p>
+          <p>Ubicación: Cuenca, Ecuador</p>
+        </address>
+        
+        <!--FORMULARIO DE CONTACTO -->
+        <form class="formulario-contacto" action="#" method="post" novalidate>
+          <label class="label" for="nombre">Nombre</label>
+          <input class="input" id="nombre" name="nombre" type="text" placeholder="Tu nombre" />
+          <div class="error-message" id="error-nombre" aria-live="polite"></div>
+
+          <label class="label" for="correo">Correo</label>
+          <input class="input" id="correo" name="correo" type="email" placeholder="correo@ejemplo.com" />
+          <div class="error-message" id="error-correo" aria-live="polite"></div>
+
+          <input class="btn" id="boton-enviar" type="submit" value="Enviar" />
+        </form>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <p class="small">© 2025 Mi primera chamba</p>
+    </footer>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
